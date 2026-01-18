@@ -1,0 +1,70 @@
+.plotContainer {
+  height: 100%;
+  min-height: 250px; /* Ensure it has some height */
+  background: 
+    radial-gradient(ellipse at center, rgba(0, 44, 154, 0.5) 0%, rgba(0, 21, 92, 0.8) 70%, #00155c 100%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="40" stroke="%2308e0db" stroke-width="0.5" fill="none" opacity="0.1"/><circle cx="50" cy="50" r="30" stroke="%2308e0db" stroke-width="0.5" fill="none" opacity="0.05"/><circle cx="50" cy="50" r="20" stroke="%2308e0db" stroke-width="0.5" fill="none" opacity="0.05"/></svg>'),
+    linear-gradient(to bottom, #00155c, #002080);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.placeholderText {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.satellite {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #08e0db;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #08e0db;
+}
+
+.sat1 {
+  animation: orbit1 15s linear infinite;
+}
+
+.sat2 {
+  animation: orbit2 20s linear infinite;
+}
+
+.sat3 {
+  animation: orbit3 25s linear infinite;
+  background-color: #ffc107;
+  box-shadow: 0 0 8px #ffc107;
+}
+
+.sat4 {
+  animation: orbit4 10s linear infinite;
+}
+
+@keyframes orbit1 {
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+  from { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(140px) rotate(360deg); }
+}
+
+@keyframes orbit3 {
+  from { transform: rotate(45deg) translateY(120px) rotate(-45deg); }
+  to   { transform: rotate(405deg) translateY(120px) rotate(-405deg); }
+}
+
+@keyframes orbit4 {
+  from { transform: rotate(-30deg) translateX(80px) rotate(30deg); }
+  to   { transform: rotate(330deg) translateX(80px) rotate(-330deg); }
+}

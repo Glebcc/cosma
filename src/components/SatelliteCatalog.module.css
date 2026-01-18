@@ -1,0 +1,42 @@
+.catalog {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #002c9a;
+}
+
+.table th {
+  color: #08e0db;
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #00155c;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.status.operational {
+  background-color: #0a5c3c;
+  color: #1affab;
+}
+
+.status.failure {
+  background-color: #7a2d2d;
+  color: #ff8a8a;
+}

@@ -1,0 +1,81 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00155c; /* Slightly lighter than the main blue for depth */
+}
+
+.header {
+  grid-column: 1 / -1;
+  background-color: #002080;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #08e0db;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  grid-row: 2 / -1;
+  background-color: #002080;
+  padding: 20px;
+  border-right: 1px solid #08e0db;
+}
+
+.sidebar h2 {
+  color: #08e0db;
+  border-bottom: 1px solid #08e0db;
+  padding-bottom: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.sidebar nav li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav li:hover {
+  background-color: #00155c;
+}
+
+.sidebar nav li.active {
+  background-color: #08e0db;
+  color: #002080;
+  font-weight: bold;
+}
+
+.mainContent {
+  grid-column: 2 / -1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.colSpan2 {
+    grid-column: span 2;
+}
+
+.colSpan3 {
+    grid-column: span 3;
+}
+

@@ -1,0 +1,73 @@
+.stationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.stationItem:last-child {
+  border-bottom: none;
+}
+
+.stationInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.stationName {
+  font-weight: bold;
+}
+
+.stationLocation {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.stationStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9rem;
+}
+
+.statusIcon {
+  margin-right: 6px;
+  /* Animation for online status */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Stop animation for non-online statuses */
+.stationStatus span:not(:first-child) .statusIcon,
+.stationStatus span:has(svg[color="#ff8a8a"]) .statusIcon,
+.stationStatus span:has(svg[color="#ffd966"]) .statusIcon {
+  animation: none;
+}
+
+
+.contact {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}
